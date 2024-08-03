@@ -1,0 +1,15 @@
+.list-workspaces {
+  background-color: white;
+  padding: 0 1.5em 1.5em 1.5em;
+  color: black;
+}
+
+.list-workspaces-title {
+  font-size: 1em;
+  background-color: #d190cf;
+  padding: 1em;
+}
+
+.workspace {
+  margin-bottom: 0.5em;
+}

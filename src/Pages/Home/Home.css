@@ -1,0 +1,32 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background-color: #400d40;
+  color: white;
+  padding: 0 0 1em 0;
+}
+
+.welcome {
+  align-self: center;
+  font-size: 1.2em;
+  margin-top: 40px;
+}
+
+.workspaces {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+.btn-new-workspace {
+  margin-top: 1.5em;
+  align-self: center;
+  color: #400d40;
+  border: #400d40;
+  background-color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: auto;
+  width: 100%;
+}

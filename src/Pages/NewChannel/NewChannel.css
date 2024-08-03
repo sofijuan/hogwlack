@@ -1,0 +1,35 @@
+.new-channel {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #400d40;
+  color: white;
+  align-items: center;
+}
+
+.new-channel-title {
+  font-size: 1.4em;
+  align-self: center;
+}
+
+.new-channel-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-channel-form-error {
+  color: red;
+  font-weight: bold;
+}
+
+.btn-new-channel {
+  background-color: white;
+  color: #400d40;
+  border: 0;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 0.7em;
+  width: 100%;
+  margin-top: 1em;
+  text-transform: uppercase;
+}

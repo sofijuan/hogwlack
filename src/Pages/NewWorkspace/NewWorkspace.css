@@ -1,0 +1,45 @@
+.new-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #400d40;
+  color: white;
+}
+
+.new-workspace-title {
+  font-size: 1.4em;
+  align-self: center;
+}
+
+.new-workspace-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-workspace-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-workspace-form-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-worspace-form-error {
+  color: red;
+  font-weight: bold;
+}
+
+.btn-new-workspace {
+  background-color: white;
+  color: #400d40;
+  border: 0;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.new-workspace-form input {
+  margin: 1em;
+}

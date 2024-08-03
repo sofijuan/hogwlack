@@ -1,0 +1,18 @@
+.workspace-detail {
+  display: flex;
+  flex-direction: column;
+  background-color: #400d40;
+}
+
+.workspace-detail-btn {
+  background-color: white;
+  color: #400d40;
+  border: 0;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 0.7em;
+}
+
+.channels {
+  color: white;
+}

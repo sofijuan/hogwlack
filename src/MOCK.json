@@ -1,0 +1,275 @@
+{
+  "userInfo": {
+    "name": "Harry",
+    "lastname": "Potter",
+    "imgProfile": "https://burrow.hogwartsishere.com/media/book_covers/harry.jpg",
+    "notification": "Disabled",
+    "id": 1
+  },
+  "workspaces": [
+    {
+      "name": "Hogwarts",
+      "creationDate": "01/09/1991",
+      "imgWorkspace": "https://i.pinimg.com/originals/90/fc/ef/90fcef69bfb65bba5da11238768ea1ba.jpg",
+      "id": 1,
+      "channels": [
+        {
+          "name": "General",
+          "id": 1,
+          "isGeneral": true,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Minerva McGonagall",
+              "imgAuthor": "https://upload.wikimedia.org/wikipedia/en/e/ea/McGonagall_%28screenshot%29.jpg",
+              "date": "01/09/1991",
+              "text": "Bienvenidos a Hogwarts. El banquete de comienzo de año se realizará dentro de poco, pero antes de que ustedes ocupen sus lugares en el Gran Salón, deberán ser seleccionados para sus casas. La selección es una ceremonia muy importante porque, mientras estén aquí, sus casas serán como su familia en Hogwarts. Tendrán clases con el resto de la casa que les toque, dormirán en los dormitorios de sus casas y pasarán el tiempo libre en la sala común de la casa."
+            },
+            {
+              "id": 2,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "¡Bienvenidos! ¡Bienvenidos a un año nuevo en Hogwarts! Antes de comenzar nuestro banquete, quiero decirles unas pocas palabras."
+            },
+            {
+              "id": 3,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Y aquí están: ¡Papanatas! ¡Llorones! ¡Baratijas! ¡Pellizcón! ¡Muchas gracias!"
+            }
+          ]
+        },
+        {
+          "name": "Anuncios",
+          "id": 2,
+          "isGeneral": false,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Tengo unos pocos anuncios que hacerles para el comienzo de año."
+            },
+            {
+              "id": 2,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Los de primer año deben tener en cuenta que los bosques en el área del castillo están prohibidos para todos los alumnos. Y algunos de nuestros antiguos alumnos también deberán recordarlo."
+            },
+            {
+              "id": 3,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "También tengo un pedido del señor Filch, el celador, para que les recuerde que no deben usar magia en los recreos, en los pasillos."
+            },
+            {
+              "id": 4,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Las pruebas de selección para Quidditch tendrán lugar en la segunda semana del trimestre. Los que estén interesados en jugar para los equipos de sus casas deben ponerse en contacto con Madam Hooch."
+            },
+            {
+              "id": 5,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Y por último, quiero decirles que este año, el corredor del tercer piso, del lado derecho, está prohibido para todos los que no deseen sufrir una muerte muy dolorosa."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Clases",
+      "creationDate": "01/09/1991",
+      "imgWorkspace": "https://static1.srcdn.com/wordpress/wp-content/uploads/2022/10/Hogwarts-Classroom.jpg",
+      "id": 2,
+      "channels": [
+        {
+          "name": "General",
+          "id": 1,
+          "isGeneral": true,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Albus Dumbledore",
+              "imgAuthor": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2014/07/24/17/Albus-Dumbledore.jpg?width=1200&height=1200&fit=crop",
+              "date": "01/09/1991",
+              "text": "Todos los estudiantes de primer año en Hogwarts deben de estudiar siete asignaturas: Transformaciones, Encantamientos, Pociones, Historia de la Magia, Defensa Contra las Artes Oscuras, Astronomía y Herbología. Las lecciones de vuelo también son obligatorias."
+            }
+          ]
+        },
+        {
+          "name": "Pociones",
+          "id": 2,
+          "isGeneral": false,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Severus Snape",
+              "imgAuthor": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/04/583592-snape-piedra-filosofaljpg.jpg?tf=1200x1200",
+              "date": "04/09/2024",
+              "text": "Ah, sí. Harry Potter. Nuestra nueva... celebridad"
+            },
+            {
+              "id": 2,
+              "author": "Severus Snape",
+              "imgAuthor": "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/04/583592-snape-piedra-filosofaljpg.jpg?tf=1200x1200",
+              "date": "04/09/2024",
+              "text": "Ustedes están aquí para aprender la sutil ciencia y el arte exacto de hacer pociones. Dado que habrá muy poco de tontos movimientos de varita aquí, muchos de ustedes van a dudar que esto sea magia. No espero que realmente entiendan la belleza de un caldero hirviendo suavemente, con sus vapores brillantes, el delicado poder de los líquidos que se deslizan a través de las venas humanas, hechizando la mente, engañando los sentidos... Puedo enseñarles cómo embotellar la fama, preparar gloria, hasta detener la muerte... si son algo más que el montón de alcornoques a los que habitualmente tengo que enseñar."
+            }
+          ]
+        },
+        {
+          "name": "Transformaciones",
+          "id": 3,
+          "isGeneral": false,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Minerva McGonagall",
+              "imgAuthor": "https://upload.wikimedia.org/wikipedia/en/e/ea/McGonagall%28screenshot%29.jpg",
+              "date": "03/09/2024",
+              "text": "Las transformaciones son una de las magias más complejas y peligrosas que ustedes aprenderán en Hogwarts. Cualquiera que pierda el tiempo en mi clase tendrá que irse y no podrá volver. Ya están advertidos."
+            }
+          ]
+        },
+        {
+          "name": "Encantamientos",
+          "id": 4,
+          "isGeneral": false,
+          "messages": []
+        },
+        {
+          "name": "Historia de la Magia",
+          "id": 5,
+          "isGeneral": false,
+          "messages": []
+        },
+        {
+          "name": "Defensa Contra las Artes Oscuras",
+          "id": 6,
+          "isGeneral": false,
+          "messages": []
+        },
+        {
+          "name": "Astronomía",
+          "id": 7,
+          "isGeneral": false,
+          "messages": []
+        },
+        {
+          "name": "Herbología",
+          "id": 8,
+          "isGeneral": false,
+          "messages": []
+        },
+        {
+          "name": "Vuelo",
+          "id": 9,
+          "isGeneral": false,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Madam Hooch",
+              "imgAuthor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8bBIrAI0Bt8hb5p_KccIgqoEeUwJUwiG_Tg&s",
+              "date": "07/09/2024",
+              "text": "¿Bueno, qué están esperando? Cada uno al lado de una escoba."
+            },
+            {
+              "id": 2,
+              "author": "Madam Hooch",
+              "imgAuthor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8bBIrAI0Bt8hb5p_KccIgqoEeUwJUwiG_Tg&s",
+              "date": "07/09/2024",
+              "text": "Vamos, apúrense."
+            },
+            {
+              "id": 3,
+              "author": "Madam Hooch",
+              "imgAuthor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8bBIrAI0Bt8hb5p_KccIgqoEeUwJUwiG_Tg&s",
+              "date": "07/09/2024",
+              "text": "Extiendan la mano derecha sobre la escoba y digan arriba."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Gryffindor",
+      "creationDate": "01/09/1991",
+      "imgWorkspace": "https://i.pinimg.com/736x/78/54/57/7854577748eca09a5b5b3b18944b2067.jpg",
+      "id": 3,
+      "channels": [
+        {
+          "name": "General",
+          "id": 1,
+          "isGeneral": true,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Sombrero Seleccionador",
+              "imgAuthor": "https://i0.wp.com/www.gamerfocus.co/wp-content/uploads/2015/06/Sombrero-seleccionador.jpg?fit=612%2C344&ssl=1",
+              "date": "01/09/1991",
+              "text": "Bienvenidos a Gryffindor, donde habitan los valientes de espíritu; su osadía, temple y caballerosidad es lo que los distingue."
+            }
+          ]
+        },
+        {
+          "name": "Sala Común",
+          "id": 2,
+          "isGeneral": false,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Dama Gorda",
+              "imgAuthor": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTudCqdSzGW3RvYnhvcAclB_08xCP42ypvS2Q&s",
+              "date": "01/09/1991",
+              "text": "¿Contraseña?"
+            },
+            {
+              "id": 2,
+              "author": "Percy Weasley",
+              "imgAuthor": "https://www.tafce.com/images/thumb/1/17/Percy_CoS_-_Edited.png/375px-Percy_CoS_-_Edited.png",
+              "date": "01/09/1991",
+              "text": "Muerte a los dragones."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Quidditch",
+      "creationDate": "01/09/1991",
+      "imgWorkspace": "https://viapais.com.ar/resizer/s90pVzDcvuc-IPUrJjHK0ckrIP4=/1023x744/smart/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/3TS54BUF5FAAPAM3D7AORUVHSE.jpg",
+      "id": 4,
+      "channels": [
+        {
+          "name": "General",
+          "id": 1,
+          "isGeneral": true,
+          "messages": [
+            {
+              "id": 1,
+              "author": "Oliver Wood",
+              "imgAuthor": "https://i.pinimg.com/564x/03/70/eb/0370eb1987ad4219ea73a4a78e7d505e.jpg",
+              "date": "15/09/1991",
+              "text": "Quidditch es bastante fácil de entender, aunque no es tan fácil de jugar. Hay siete jugadores de cada lado. Tres se llaman cazadores. Los cazadores se tiran la Quaffle unos a otros y tratan de pasarla por uno de los aros para marcar un tanto."
+            }
+          ]
+        },
+        {
+          "name": "Partidos",
+          "id": 2,
+          "isGeneral": false,
+          "messages": []
+        }
+      ]
+    }
+  ]
+}
