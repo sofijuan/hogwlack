@@ -1,6 +1,13 @@
+.workspace-detail-name {
+  background-color: #400d40;
+  margin: 0;
+  padding: 1em;
+  border: none;
+  width: 70%;
+  display: inline-block;
+}
 .workspace-detail {
   display: flex;
-  flex-direction: column;
   background-color: #400d40;
 }
 
@@ -13,6 +20,11 @@
   font-size: 0.7em;
 }
 
-.channels {
-  color: white;
+.workspace-detail-btn-exit {
+  background-color: white;
+  color: #400d40;
+  border: 0;
+  padding: 0.5em;
+  font-weight: bold;
+  font-size: 0.7em;
 }

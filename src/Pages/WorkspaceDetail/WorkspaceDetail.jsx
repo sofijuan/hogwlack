@@ -67,38 +67,40 @@ const WorkspaceDetail = () => {
   };
 
   return (
-    <div className="workspace-detail">
-      <h2 className="workspace-name">{workspace.name}</h2>
+    <>
+      <h2 className="workspace-detail-name">{workspace.name}</h2>
       <Link to="/">
-        <button className="workspace-detail-btn">Salir</button>
+        <button className="workspace-detail-btn-exit">Salir</button>
       </Link>
-      <div className="channels">
-        <ListChannels channels={workspace.channels} />
-        <button className="workspace-detail-btn" onClick={goToNewChannel}>
-          Crear canal
-        </button>
-      </div>
-      <div className="messages">
-        <ListMessages messages={messages} />
-        <form onSubmit={handleSendMessage}>
-          <input
-            type="text"
-            placeholder="Escribe aquí tu mensaje"
-            value={newMessage}
-            onChange={handleNewMessageChange}
-          />
-          <button className="workspace-detail-btn" disabled={!newMessage}>
-            Enviar
+      <div className="workspace-detail">
+        <div className="channels">
+          <ListChannels channels={workspace.channels} />
+          <button className="workspace-detail-btn" onClick={goToNewChannel}>
+            Crear canal
           </button>
-        </form>
-        <ToastContainer
-          position="bottom-right"
-          pauseOnHover
-          draggable
-          theme="dark"
-        />
+        </div>
+        <div className="messages">
+          <ListMessages messages={messages} />
+          <form onSubmit={handleSendMessage}>
+            <input
+              type="text"
+              placeholder="Escribe aquí tu mensaje"
+              value={newMessage}
+              onChange={handleNewMessageChange}
+            />
+            <button className="workspace-detail-btn" disabled={!newMessage}>
+              Enviar
+            </button>
+          </form>
+          <ToastContainer
+            position="bottom-right"
+            pauseOnHover
+            draggable
+            theme="dark"
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 export default WorkspaceDetail;
