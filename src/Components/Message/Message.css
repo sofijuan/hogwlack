@@ -2,13 +2,20 @@
   height: 5em;
   width: 5em;
   border-radius: 5px;
+  margin: 0.5em;
 }
 
 .username {
   font-weight: bold;
 }
 
+.hour {
+  color: grey;
+}
+
 .message {
-  color: white;
+  color: black;
   font-size: 0.8em;
+  display: flex;
+  margin: 0.5em 0;
 }

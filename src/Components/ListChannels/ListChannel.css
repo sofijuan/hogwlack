@@ -1,0 +1,22 @@
+.list-channels {
+  background-color: #512051;
+  color: white;
+  padding: 1em;
+}
+
+.channel {
+  margin: 0.5em 0;
+}
+
+.channel-link {
+  text-decoration: none;
+  color: white;
+  padding: 0.5em;
+  border-radius: 5px;
+  display: block;
+  background-color: #b782b5;
+}
+
+.channel-link:hover {
+  background-color: #684b67;
+}

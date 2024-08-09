@@ -1,13 +1,48 @@
+.workspace-detail {
+  display: flex;
+  flex-direction: column;
+  background-color: #400d40;
+  height: 100vh;
+}
+
+.workspace-detail-header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  font-size: 0.7em;
+  background-color: #400d40;
+}
+
+.btn-exit-and-hamburger {
+  display: flex;
+  align-items: center;
+}
+
 .workspace-detail-name {
   background-color: #400d40;
   margin: 0;
   padding: 1em;
   border: none;
-  width: 70%;
-  display: inline-block;
+  color: white;
+  flex-grow: 1;
 }
-.workspace-detail {
-  display: flex;
+
+.workspace-detail-btn-exit {
+  color: white;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.8em;
+  margin: 0.5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.workspace-detail-btn-exit:hover {
+  font-weight: bold;
+}
+
+.workspace-channels-and-messages {
   background-color: #400d40;
 }
 
@@ -20,11 +55,127 @@
   font-size: 0.7em;
 }
 
-.workspace-detail-btn-exit {
+.channels {
+  display: none;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+.channels.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 52px;
+  background-color: #400d40;
+  width: 100%;
+}
+
+.channels-title {
+  border: none;
+  padding: 0.2em 0.5em;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+}
+
+.hamburger {
+  position: relative;
+  flex-direction: column;
+  padding: 0.2em;
+  margin: 0.5em;
+  cursor: pointer;
+  background-color: #400d40;
+}
+
+.hamburger div {
+  width: 2em;
+  height: 2px;
   background-color: white;
-  color: #400d40;
-  border: 0;
-  padding: 0.5em;
+  margin: 0.5em;
+  transition: all 0.3s ease;
+}
+
+.hamburger.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 3px);
+}
+
+.hamburger.open .bar2 {
+  opacity: 0;
+}
+
+.hamburger.open .bar3 {
+  transform: rotate(45deg) translate(-7px, -5px);
+}
+
+.workspace-detail-form {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  background-color: white;
+}
+
+.workspace-detail-form button:hover {
   font-weight: bold;
-  font-size: 0.7em;
+}
+
+.workspace-detail-form input {
+  flex-grow: 1;
+}
+
+.styled-btn {
+  background-color: #b782b5;
+  color: white;
+  border: 0;
+  padding: 0.5em 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.styled-btn:hover {
+  background-color: #684b67;
+}
+
+.workspace-detail-btn-create {
+  margin: 0.5em;
+  border-radius: 5px;
+}
+.workspace-detail-btn-create:hover {
+  font-weight: bold;
+}
+
+@media (min-width: 721px) {
+  .channels {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: #400d40;
+    min-width: 20%;
+    height: 100vh;
+  }
+
+  .workspace-channels-and-messages {
+    display: flex;
+    height: 100vh;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .channels {
+    max-height: 30%;
+    overflow-y: scroll;
+  }
 }

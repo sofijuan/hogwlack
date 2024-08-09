@@ -11,7 +11,7 @@ const Home = () => {
       <div className="workspaces">
         <ListWorkspaces className="list-workspaces" />
         <Link to="new-workspace">
-          <button className="btn-new-workspace">Crear Entorno</button>
+          <button className="btn-home-new-workspace">Crear Entorno</button>
         </Link>
         <ToastContainer
           position="bottom-right"

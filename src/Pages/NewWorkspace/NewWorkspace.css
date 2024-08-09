@@ -1,45 +1,103 @@
 .new-workspace {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
   background-color: #400d40;
   color: white;
 }
 
 .new-workspace-title {
-  font-size: 1.4em;
-  align-self: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+  text-align: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .new-workspace-form {
+  background-color: #512051;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px;
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .new-workspace-inputs {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.new-workspace-inputs label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.new-workspace-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #e8a9e6;
+  font-size: 1em;
+  width: 100%;
+}
+
+.new-worspace-form-error {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .new-workspace-form-buttons {
   display: flex;
-  flex-direction: column;
-}
-
-.new-worspace-form-error {
-  color: red;
-  font-weight: bold;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
 }
 
 .btn-new-workspace {
-  background-color: white;
-  color: #400d40;
+  background-color: #b782b5;
+  color: white;
   border: 0;
-  padding: 0.5em;
+  border-radius: 5px;
+  padding: 10px 20px;
   font-weight: bold;
-  font-size: 0.7em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px;
 }
 
-.new-workspace-form input {
-  margin: 1em;
+.btn-new-workspace:hover {
+  background-color: #684b67;
+}
+
+.btn-new-workspace:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+  .new-workspace-form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-new-workspace {
+    width: 100%;
+  }
+}
+
+@media (min-width: 721px) {
+  .btn-new-workspace {
+    margin: 5px;
+  }
 }

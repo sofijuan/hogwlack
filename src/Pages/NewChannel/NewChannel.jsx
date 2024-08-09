@@ -38,9 +38,18 @@ const NewChannel = () => {
       name: channelName,
       id: workspace.channels.length + 1,
       isGeneral: false,
-      messages: [],
+      messages: [
+        {
+          id: 1,
+          author: "Minerva McGonagall",
+          imgAuthor:
+            "https://depor.com/resizer/OfvrRESZOi4qWgzOYsGBf1PIuHU=/1200x1200/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/N34U2GVEQVD6DDE7GJHAEX65PY.jpg",
+          date: new Date(),
+          text: "Bienvenido",
+        },
+      ],
     };
-
+    console.log(newChannel);
     localStorageData.workspaces
       .find((w) => w.id === workspace.id)
       .channels.push(newChannel);
@@ -69,12 +78,14 @@ const NewChannel = () => {
           onChange={handleChannelNameChange}
         />
         {error ? <span className="new-channel-form-error">{error}</span> : ""}
-        <button type="submit" disabled={!channelName}>
-          Confirmar
-        </button>
-        <Link to={previousPath}>
-          <button className="btn-new-channel">Cancelar</button>
-        </Link>
+        <div className="new-channel-submit-and-cancel">
+          <button type="submit" disabled={!channelName}>
+            CONFIRMAR
+          </button>
+          <Link to={previousPath}>
+            <button className="btn-new-channel">CANCELAR</button>
+          </Link>
+        </div>
       </form>
     </div>
   );

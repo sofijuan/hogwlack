@@ -18,9 +18,9 @@ const WorkspaceDetail = () => {
   if (!workspace)
     return (
       <>
-        <div>Workspace no encontrado</div>
+        <div>Workspace no en contrado</div>
         <Link to="/">
-          <button>Salir</button>
+          <button className="btn-exit">Salir</button>
         </Link>
       </>
     );
@@ -66,41 +66,66 @@ const WorkspaceDetail = () => {
     });
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCollapse = () => {
+    setIsOpen(!isOpen);
+  };
   return (
-    <>
-      <h2 className="workspace-detail-name">{workspace.name}</h2>
-      <Link to="/">
-        <button className="workspace-detail-btn-exit">Salir</button>
-      </Link>
-      <div className="workspace-detail">
-        <div className="channels">
+    <div className="workspace-detail">
+      <div className="workspace-detail-header">
+        <h2 className="workspace-detail-name"># {workspace.name}</h2>
+        <div className="btn-exit-and-hamburger">
+          <Link to="/">
+            <button className="workspace-detail-btn-exit styled-btn">
+              SALIR
+            </button>
+          </Link>
+          <div
+            className={`hamburger ${isOpen ? "open" : ""}`}
+            onClick={toggleCollapse}
+          >
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div>
+        </div>
+      </div>
+      <div className="workspace-channels-and-messages">
+        <div className={`channels ${isOpen ? "open" : ""}`}>
           <ListChannels channels={workspace.channels} />
-          <button className="workspace-detail-btn" onClick={goToNewChannel}>
-            Crear canal
+          <button
+            className="workspace-detail-btn-create styled-btn"
+            onClick={goToNewChannel}
+          >
+            CREAR CANAL
           </button>
         </div>
         <div className="messages">
           <ListMessages messages={messages} />
-          <form onSubmit={handleSendMessage}>
+          <form onSubmit={handleSendMessage} className="workspace-detail-form">
             <input
               type="text"
               placeholder="Escribe aquí tu mensaje"
               value={newMessage}
               onChange={handleNewMessageChange}
             />
-            <button className="workspace-detail-btn" disabled={!newMessage}>
-              Enviar
+            <button
+              className="workspace-detail-btn-send styled-btn"
+              disabled={!newMessage}
+            >
+              ENVIAR
             </button>
           </form>
-          <ToastContainer
-            position="bottom-right"
-            pauseOnHover
-            draggable
-            theme="dark"
-          />
         </div>
+        <ToastContainer
+          position="bottom-right"
+          pauseOnHover
+          draggable
+          theme="dark"
+        />
       </div>
-    </>
+    </div>
   );
 };
 export default WorkspaceDetail;

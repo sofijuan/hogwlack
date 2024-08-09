@@ -5,9 +5,11 @@ const Message = ({ author, imgAuthor, date, text }) => {
   return (
     <div className="message">
       <img className="img-profile" src={imgAuthor} alt={author} />
-      <span className="username"> {author}</span>
-      <span> {date}</span>
-      <p>{text}</p>
+      <div className="message-content">
+        <span className="username"> {author}</span>
+        <span className="hour"> {new Date(date).toLocaleTimeString()}</span>
+        <p className="text-message">{text}</p>
+      </div>
     </div>
   );
 };

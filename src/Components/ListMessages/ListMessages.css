@@ -1,4 +1,8 @@
 .list-messages {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  padding: 1em;
+  overflow-y: auto;
+  height: 100vh;
 }
