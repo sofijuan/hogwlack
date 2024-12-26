@@ -11,7 +11,7 @@ const ListWorkspaces = () => {
   useEffect(() => {
     const fetchUser = async () => {
       const response = await fetch(
-        '${import.meta.env.VITE_BACKEND_URL}/api/auth/me',
+        `${import.meta.env.VITE_BACKEND_URL}/api/auth/me`,
         {
           method: 'GET',
           headers: {
