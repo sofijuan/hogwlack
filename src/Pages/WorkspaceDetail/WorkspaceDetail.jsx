@@ -1,72 +1,96 @@
-import React, { useState, useEffect } from "react";
-import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import ListChannels from "../../Components/ListChannels/ListChannels";
-import ListMessages from "../../Components/ListMessages/ListMessages";
-import "./WorkspaceDetail.css";
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import ListChannels from '../../Components/ListChannels/ListChannels';
+import ListMessages from '../../Components/ListMessages/ListMessages';
+import './WorkspaceDetail.css';
+import Context from '../../context/Context';
 
 const WorkspaceDetail = () => {
   const { id_workspace, id_channel } = useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
-  const localStorageData = JSON.parse(localStorage.getItem("data"));
-  const workspaces = localStorageData.workspaces;
-  const userInfo = localStorageData.userInfo;
+  const [newMessage, setNewMessage] = useState('');
+  const [isOpen, setIsOpen] = useState(false);
+  const { workspace, setChannel, loggedUser, setLoggedUser } =
+    useContext(Context);
+  let { channel } = useContext(Context);
 
-  const workspace = workspaces.find((w) => w.id === Number(id_workspace));
+  const [ws, setWs] = useState(null);
+
+  useEffect(() => {
+    const socket = new WebSocket(`${import.meta.env.VITE_WS_URL}`);
+
+    setWs(socket);
+
+    socket.onmessage = (event) => {
+      const receivedMessage = JSON.parse(event.data);
+
+      // Ajusta los nombres de workspaceId/channelId según tu caso
+      if (
+        receivedMessage.id_workspace === id_workspace &&
+        receivedMessage.id_channel === id_channel
+      ) {
+        setChannel((prevChannel) => ({
+          ...prevChannel,
+          messages: [...prevChannel.messages, receivedMessage]
+        }));
+      }
+    };
+
+    // Limpiar conexión al desmontar
+    return () => {
+      socket.close();
+    };
+  }, []);
+
   if (!workspace)
     return (
       <>
-        <div>Workspace no en contrado</div>
+        <div>Workspace no encontrado</div>
         <Link to="/">
           <button className="btn-exit">Salir</button>
         </Link>
       </>
     );
 
-  const [messages, setMessages] = useState([]);
-  const [newMessage, setNewMessage] = useState("");
-
   const handleNewMessageChange = (e) => {
     setNewMessage(e.target.value);
   };
 
-  const addMessageToLocalStorage = (newMsg) => {
-    workspace.channels
-      .find((c) => c.id === Number(id_channel))
-      .messages.push(newMsg);
-    localStorage.setItem("data", JSON.stringify(localStorageData));
-  };
-
-  const handleSendMessage = (e) => {
+  const handleSendMessage = async (e) => {
     e.preventDefault();
 
-    const newMessageObject = {
-      id: messages.length + 1,
-      author: userInfo.name + " " + userInfo.lastname,
-      imgAuthor: userInfo.imgProfile,
-      date: new Date().toLocaleString(),
-      text: newMessage,
+    const messageToSend = {
+      content: newMessage,
+      id_workspace: id_workspace,
+      id_channel: id_channel,
+      sender: loggedUser._id
     };
 
-    setMessages([...messages, newMessageObject]);
-    setNewMessage("");
-    addMessageToLocalStorage(newMessageObject);
+    ws.send(JSON.stringify(messageToSend));
+
+    setNewMessage('');
   };
 
-  useEffect(() => {
-    const channel = workspace.channels.find((c) => c.id === Number(id_channel));
-    setMessages(channel ? channel.messages : []);
-  }, [id_channel]);
-
   const goToNewChannel = () => {
-    navigate("/new-channel", {
-      state: { previousPath: location.pathname, workspaceId: workspace.id },
+    navigate(`/workspace/${id_workspace}/new-channel`, {
+      state: { previousPath: location.pathname, workspaceId: workspace._id }
     });
   };
 
-  const [isOpen, setIsOpen] = useState(false);
+  const goToSearchChannel = () => {
+    navigate(`/workspace/${id_workspace}/search-channel`, {
+      state: { previousPath: location.pathname, workspaceId: workspace._id }
+    });
+  };
+
+  const closeSession = () => {
+    localStorage.removeItem('token');
+    setLoggedUser(null);
+    navigate('/login');
+  };
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -76,13 +100,19 @@ const WorkspaceDetail = () => {
       <div className="workspace-detail-header">
         <h2 className="workspace-detail-name"># {workspace.name}</h2>
         <div className="btn-exit-and-hamburger">
-          <Link to="/">
+          <Link to="/home">
             <button className="workspace-detail-btn-exit styled-btn">
               SALIR
             </button>
           </Link>
+          <button
+            className="workspace-detail-btn-exit styled-btn"
+            onClick={() => closeSession()}
+          >
+            Cerrar sesión
+          </button>
           <div
-            className={`hamburger ${isOpen ? "open" : ""}`}
+            className={`hamburger ${isOpen ? 'open' : ''}`}
             onClick={toggleCollapse}
           >
             <div className="bar1"></div>
@@ -92,7 +122,7 @@ const WorkspaceDetail = () => {
         </div>
       </div>
       <div className="workspace-channels-and-messages">
-        <div className={`channels ${isOpen ? "open" : ""}`}>
+        <div className={`channels ${isOpen ? 'open' : ''}`}>
           <ListChannels channels={workspace.channels} />
           <button
             className="workspace-detail-btn-create styled-btn"
@@ -100,9 +130,18 @@ const WorkspaceDetail = () => {
           >
             CREAR CANAL
           </button>
+          <button
+            className="workspace-detail-btn-create styled-btn"
+            onClick={goToSearchChannel}
+          >
+            BUSCAR CANAL
+          </button>
         </div>
         <div className="messages">
-          <ListMessages messages={messages} />
+          <ListMessages
+            messages={channel.messages}
+            loggedUserId={loggedUser._id}
+          />
           <form onSubmit={handleSendMessage} className="workspace-detail-form">
             <input
               type="text"

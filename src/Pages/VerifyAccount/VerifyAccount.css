@@ -1,0 +1,90 @@
+/* Fondo general del componente */
+.verify-account {
+    background-image: url('https://wallpapercat.com/w/full/2/a/6/15618-1920x1080-desktop-full-hd-hogwarts-legacy-wallpaper-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título principal */
+  .verify-account-main-title {
+    font-size: 1.7rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor del mensaje de verificación */
+  .verify-account-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Descripción */
+  .verify-account-description {
+    font-size: 0.9rem;
+    color: #b1abab;
+    margin-bottom: 20px;
+  }
+  
+  /* Botón para redirigir al login */
+  .verify-account-button {
+    background-color: #b782b5;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .verify-account-button:hover {
+    background-color: #684b67;
+  }
+  
+  /* Enlace para volver al login */
+  .verify-account-back-to-login {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  .verify-account-back-to-login .verify-account-link {
+    color: #b782b5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .verify-account-back-to-login .verify-account-link:hover {
+    color: #d3b3d2;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 720px) {
+    .verify-account-container {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .verify-account-container h2 {
+      font-size: 18px;
+    }
+  
+    .verify-account-container button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+  

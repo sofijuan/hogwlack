@@ -3,4 +3,16 @@
   color: white;
   padding: 0.5em;
   display: block;
+  cursor: pointer;
+}
+
+.channel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.channel-buttons {
+  color: white;
+  cursor: pointer;
 }

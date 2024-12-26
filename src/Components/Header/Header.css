@@ -1,0 +1,29 @@
+.header-app {
+    background-color: #400d40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-app-title {
+    color: #fff;
+    margin-left: 10px;
+  }
+  
+  .header-app-buttons {
+    margin-right: 10px;
+  }
+  
+  .header-app-btn-logout {
+    background-color: #b782b5;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  

@@ -20,7 +20,9 @@
   margin: 0;
 }
 
-.btn-home-new-workspace {
+.btn-home-new-workspace,
+.btn-home-search-workspace,
+.home-btn-logout {
   background-color: #b782b5;
   color: white;
   border: 0;
@@ -34,7 +36,19 @@
   width: 100%;
 }
 
-.btn-home-new-workspace:hover {
+.btn-home-new-workspace:hover,
+.btn-home-search-workspace:hover {
   background-color: #e6a9e4;
   color: #400d40;
+}
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-btn-logout {
+  font-size: 0.7em;
+  padding: 5px;
 }

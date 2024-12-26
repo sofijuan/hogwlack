@@ -1,17 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import ListWorkspaces from "../../Components/ListWorkspaces/ListWorkspaces";
-import "./Home.css";
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import ListWorkspaces from '../../Components/ListWorkspaces/ListWorkspaces';
+import './Home.css';
+import Header from '../../Components/Header/Header';
 
 const Home = () => {
   return (
     <div className="home">
-      <h1 className="welcome">Bienvenido a Hogwlack</h1>
+      <Header />
+
       <div className="workspaces">
         <ListWorkspaces className="list-workspaces" />
-        <Link to="new-workspace">
+        <Link to="/new-workspace">
           <button className="btn-home-new-workspace">Crear Entorno</button>
+        </Link>
+        <Link to="/search-workspace">
+          <button className="btn-home-search-workspace">Buscar Entorno</button>
         </Link>
         <ToastContainer
           position="bottom-right"

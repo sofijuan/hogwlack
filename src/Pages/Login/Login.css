@@ -1,0 +1,197 @@
+.login-main-title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  .login {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #400d40;
+    color: black;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    background-image: url('https://wallpapercat.com/w/full/2/a/6/15618-1920x1080-desktop-full-hd-hogwarts-legacy-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .login-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .login-title {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .login-form input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: none;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  .login-form-error {
+    color: rgb(114, 21, 21);
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .login-submit-and-cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-submit-and-cancel button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #b782b5;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-submit-and-cancel button:disabled {
+    background-color: #b782b5;
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .login-submit-and-cancel button:hover:not(:disabled) {
+    background-color: #684b67;
+  }
+  
+  .login-register {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #fff; /* Texto oscuro */
+  }
+  
+  .login-register .login-register-link {
+    color: #fff; /* Púrpura acorde al diseño */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .login-register .login-register-link:hover {
+    color: #fff; /* Hover púrpura más oscuro */
+  }
+  
+  .login-forgot-password {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+  }
+  
+  .login-forgot-password:hover {
+    color: #684b67;
+  }
+  
+  /* Media Queries Responsivas */
+  
+  /* Pantallas pequeñas (máximo ancho de 720px) */
+  @media (max-width: 720px) {
+    .login-main-title {
+      font-size: 1.8em;
+      text-align: center;
+    }
+  
+    .login {
+      padding: 15px;
+      background-position: center;
+      background-size: contain;
+    }
+  
+    .login-form {
+      max-width: 90%; /* Ajustar el ancho de los formularios */
+    }
+  
+    .login-form input {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  
+    .login-submit-and-cancel {
+      flex-direction: column; /* Botones en columna */
+    }
+  
+    .login-submit-and-cancel button {
+      width: 100%; /* Botones adaptables al ancho */
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Pantallas muy pequeñas (máximo ancho de 480px) */
+  @media (max-width: 480px) {
+    .login-main-title {
+      font-size: 1.5em;
+      margin: 15px;
+    }
+  
+    .login-form input {
+      font-size: 0.8em;
+      padding: 6px;
+    }
+  
+    .login-submit-and-cancel button {
+      font-size: 0.9em;
+      padding: 8px;
+    }
+  }
+  
+  /* Pantallas grandes (mínimo ancho de 1280px) */
+  @media (min-width: 1280px) {
+    .login {
+      padding: 40px;
+      background-size: cover;
+    }
+  
+    .login-main-title {
+      font-size: 3em;
+    }
+  
+    .login-form input {
+      font-size: 1.2em;
+      padding: 15px;
+    }
+  
+    .login-submit-and-cancel button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+    }
+  }
+  

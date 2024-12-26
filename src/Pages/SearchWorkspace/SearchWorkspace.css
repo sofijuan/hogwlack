@@ -1,0 +1,203 @@
+.search-workspace {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url('https://wallpapers.com/images/featured/hogwarts-2h5rh3z2vkebpcvf.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .search-workspace-title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  .search-workspace-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .search-workspace-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  
+  .search-workspace-subtitle {
+    margin: 10px 0;
+  }
+  
+  .search-workspace-header button,
+  .btn-join,
+  .btn-back-to-search,
+  .btn-search {
+    background-color: #b782b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-join,
+  .btn-back-to-search,
+  .btn-search {
+    font-size: 0.7em;
+  }
+  
+  .search-workspace-header button:hover {
+    background-color: #684b67;
+  }
+  
+  .search-workspace-form {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .search-workspace-form label {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  .search-workspace-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #e8a9e6;
+    font-size: 1em;
+    width: 100%;
+  }
+  
+  .search-workspace-form button {
+    background-color: #b782b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-workspace-form button:hover {
+    background-color: #684b67;
+  }
+  
+  /* Errores */
+  .register-form-error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    color: white;
+  }
+  
+  .modal h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .modal .workspace {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #e8a9e6;
+  }
+  
+  .modal .workspace img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .modal .workspace button {
+    background-color: #b782b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+  }
+  
+  .modal-workspace-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5em 0;
+  }
+  
+  .btn-back-to-search {
+    display: flex;
+    justify-self: center;
+    margin-top: 1.5em;
+  }
+  
+  .modal .workspace button:hover {
+    background-color: #684b67;
+  }
+  
+  .search-workspace-input {
+    padding: 0.5em;
+  }
+  
+  @media (max-width: 720px) {
+    .search-workspace-form {
+      padding: 15px;
+    }
+  
+    .search-workspace-header {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    .search-workspace-header button {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

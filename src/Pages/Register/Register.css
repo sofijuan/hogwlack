@@ -1,0 +1,124 @@
+/* Fondo general del componente */
+.register {
+    background-image: url('https://wallpapercat.com/w/full/2/a/6/15618-1920x1080-desktop-full-hd-hogwarts-legacy-wallpaper-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Título principal */
+  .register-main-title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor del formulario */
+  .register-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  /* Título del formulario */
+  .register-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+  
+  /* Errores */
+  .register-form-error {
+    color: red;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+  
+  /* Input del formulario */
+  .register-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e8a9e6;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  /* Etiqueta para la foto de perfil */
+  .register-profile-label {
+    font-size: 0.9rem;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Botones */
+  .register-submit-and-cancel button {
+    background-color: #b782b5;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-submit-and-cancel button:hover {
+    background-color: #684b67;
+  }
+  
+  /* Enlace para volver al login */
+  .register-login-link {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #fff;
+  }
+  
+  .register-login-link .register-link {
+    color: #b782b5;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .register-login-link .register-link:hover {
+    color: #d3b3d2;
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 720px) {
+    .register-container {
+      max-width: 90%;
+      padding: 15px;
+    }
+  
+    .register-container h2 {
+      font-size: 18px;
+    }
+  
+    .register-container button {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .register-container input[type='text'],
+    .register-container input[type='email'],
+    .register-container input[type='password'],
+    .register-container input[type='file'] {
+      font-size: 14px;
+    }
+  }
+  
